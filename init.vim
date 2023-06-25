@@ -9,7 +9,6 @@ lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/indentline')
 lua require('plugin-config/ultisnip')
 lua require('plugin-config/vimtex')
-lua require('plugin-config/vim-airline')
 "##########################################################
 colorscheme zephyr
 
@@ -24,6 +23,7 @@ inoremap " ""<Esc>i
 inoremap { {<CR>}<Esc>O
 
 "########################################################
+let g:airline_powerline_fonts = 1
 
 
 

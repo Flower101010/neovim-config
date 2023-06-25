@@ -1,5 +1,15 @@
-vim.g.UltiSnipsExpandTrigger = '<Tab>'    -- use Tab to expand snippets
-vim.g.UltiSnipsJumpForwardTrigger = '<Tab>'    -- use Tab to move forward through tabstops
-vim.g.UltiSnipsJumpBackwardTrigger = '<S-Tab>'  -- use Shift-Tab to move backward through tabstops
-vim.g.UltiSnipsSnippetDirectories = {vim.env.HOME .. '/.local/share/nvim/site/pack/packer/start/vim-snippets'}
+vim.opt.termguicolors = true
+require("bufferline").setup {
+    options = {
+        -- 使用 nvim 内置lsp
+        diagnostics = "nvim_lsp",
+        -- 左侧让出 nvim-tree 的位置
+        offsets = {{
+            filetype = "NvimTree",
+            text = "File Explorer",
+            highlight = "Directory",
+            text_align = "left"
+        }}
+    }
+}
 

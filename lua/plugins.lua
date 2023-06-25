@@ -54,6 +54,10 @@ return require('packer').startup(function()
     use{'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
 
+    -- Tab页插件
+    use {'akinsho/bufferline.nvim', tag = "*", 
+          requires = 'nvim-tree/nvim-web-devicons'}
+
     -- coc 代码提示
     use {'neoclide/coc.nvim', branch = 'release'}
 
