@@ -2,12 +2,6 @@ return require('packer').startup(function()
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    -- gruvbox theme
-    use {
-       "ellisonleao/gruvbox.nvim",
-       requires = {"rktjmp/lush.nvim"}
-    }
-
     -- zephyr theme
     use {
        'glepnir/zephyr-nvim',
@@ -63,13 +57,13 @@ return require('packer').startup(function()
 
     -- 起始页面
     use {
-      'glepnir/dashboard-nvim',
-      event = 'VimEnter',
-      config = function()
-      require('dashboard').setup {
-            -- config
-      }
-        end,
-      requires = {'nvim-tree/nvim-web-devicons'}
-    }
-end)
+          'glepnir/dashboard-nvim',
+          event = 'VimEnter',
+          config = function()
+            require('dashboard').setup {
+              -- config
+            }
+          end,
+          requires = {'nvim-tree/nvim-web-devicons'}
+        }
+end)    
