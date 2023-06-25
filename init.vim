@@ -10,6 +10,8 @@ lua require('plugin-config/indentline')
 lua require('plugin-config/ultisnip')
 lua require('plugin-config/vimtex')
 lua require('plugin-config/bufferline')
+lua require('plugin-config/dashboard-nvim')
+
 "##########################################################
 colorscheme zephyr
 
