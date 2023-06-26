@@ -61,6 +61,8 @@ return require('packer').startup(function()
     -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- git 管理
+    use {'lewis6991/gitsigns.nvim'}
 
     -- 起始页
     use {

@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/cynic/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/cynic/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/home/cynic/.local/share/nvim/site/pack/packer/start/indentLine",

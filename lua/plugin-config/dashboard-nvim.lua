@@ -5,7 +5,12 @@
        enable = true,
       },
       shortcut = {
-        { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
+        { 
+          desc = '󰊳 Update', 
+          group = '@property', 
+          action = 'PackerSync', 
+          key = 'u' 
+        },
         {
           icon = ' ',
           icon_hl = '@variable',
@@ -28,7 +33,7 @@
         },
       },
       packages = { enable = false },
-      project = { enable = true, action = 'Telescope find_files cwd=' },
+      project = { enable = true, action = 'Telescope find_files' },
       footer = {'',
     'Veni, vidi, vici.',},
     },
