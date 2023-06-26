@@ -27,5 +27,9 @@
           key = 'd',
         },
       },
+      packages = { enable = false },
+      project = { enable = true, action = 'Telescope find_files cwd=' },
+      footer = {'',
+    'Veni, vidi, vici.',},
     },
   })

@@ -55,15 +55,16 @@ return require('packer').startup(function()
     -- coc 代码提示
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- 起始页面
+    -- 模糊搜索
     use {
-          'glepnir/dashboard-nvim',
-          event = 'VimEnter',
-          config = function()
-            require('dashboard').setup {
-              -- config
-            }
-          end,
-          requires = {'nvim-tree/nvim-web-devicons'}
-        }
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- 起始页
+    use {
+      'glepnir/dashboard-nvim'
+    }
+
 end)    
