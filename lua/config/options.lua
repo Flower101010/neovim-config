@@ -20,7 +20,3 @@ vim.o.shellpipe = "| Out-File -Encoding UTF8 %s"
 
 -- 设置 shellredir
 vim.o.shellredir = "| Out-File -Encoding UTF8 %s"
-
-if vim.g.neovide then
-  vim.g.neovide_fullscreen = true
-end
