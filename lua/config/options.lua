@@ -24,6 +24,6 @@ vim.o.shellredir = "| Out-File -Encoding UTF8 %s"
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.g.neovide_hide_mouse_when_typing = true
-  vim.g.neovide_remember_window_size = false
+  vim.g.neovide_remember_window_size = true
   vim.g.neovide_refresh_rate = 165
 end
