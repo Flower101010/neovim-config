@@ -21,6 +21,9 @@ vim.o.shellpipe = "| Out-File -Encoding UTF8 %s"
 -- 设置 shellredir
 vim.o.shellredir = "| Out-File -Encoding UTF8 %s"
 
+-- 禁用拼写检查
+vim.opt.spell = false
+
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.g.neovide_hide_mouse_when_typing = true
