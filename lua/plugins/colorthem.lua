@@ -3,7 +3,7 @@ if true then
     {
       "folke/tokyonight.nvim",
       lazy = true,
-
+      transparent = true,
       opts = {
         style = "night",
         transparent = false,
@@ -16,8 +16,8 @@ if true then
           functions = {},
           variables = {},
           -- Background styles. Can be "dark", "transparent" or "normal"
-          sidebars = "transparent", -- style for sidebars, see below
-          floats = "transparent", -- style for floating windows
+          sidebars = "dark", -- style for sidebars, see below
+          floats = "dark", -- style for floating windows
         },
         dim_inactive = true,
       },

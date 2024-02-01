@@ -10,7 +10,63 @@ if vim.g.neovide then
     { noremap = true, silent = true }
   )
   -- "<C-=>" 放大字体 "<C-->" 缩小字体 "<C-0>" 恢复默认
-  vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
-  vim.keymap.set({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>")
-  vim.keymap.set({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>")
+  local change_scale_factor = function(delta)
+    if delta == 1 then
+      vim.g.neovide_scale_factor = 1
+    else
+      vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+    end
+
+    vim.cmd("redraw!")
+  end
+
+  vim.keymap.set("n", "<C-=>", function()
+    change_scale_factor(1.25)
+  end)
+  vim.keymap.set("n", "<C-->", function()
+    change_scale_factor(1 / 1.25)
+  end)
+
+  vim.keymap.set("n", "<C-0>", function()
+    change_scale_factor(1)
+  end)
+
+  -- 透明度 快捷键 设置
+  vim.g.neovide_transparency = 1.0
+
+  local change_transparency = function(delta)
+    vim.g.neovide_transparency = vim.g.neovide_transparency + delta
+  end
+
+  vim.keymap.set({ "n", "v", "o" }, "<A-=>", function()
+    change_transparency(0.01)
+  end)
+
+  vim.keymap.set({ "n", "v", "o" }, "<A-->", function()
+    change_transparency(-0.01)
+  end)
+
+  -- Function to toggle transparency between 0.8 and 1.0
+  function ToggleTransparency()
+    if vim.g.neovide_transparency == 1 then
+      vim.g.neovide_transparency = 0.8
+    else
+      vim.g.neovide_transparency = 1
+    end
+    vim.cmd(":lua vim.g.neovide_transparency = " .. vim.g.neovide_transparency)
+  end
+
+  -- Function to toggle transparency between 0 and 1.0
+  function ToggleTransparency_other()
+    if vim.g.neovide_transparency == 1 then
+      vim.g.neovide_transparency = 0
+    else
+      vim.g.neovide_transparency = 1
+    end
+    vim.cmd(":lua vim.g.neovide_transparency = " .. vim.g.neovide_transparency)
+  end
+
+  -- Map the key to the toggle function
+  vim.api.nvim_set_keymap("n", "<F9>", ":lua ToggleTransparency()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<F8>", ":lua ToggleTransparency_other()<CR>", { noremap = true, silent = true })
 end
