@@ -1,9 +1,11 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
-vim.opt.guifont = "UbuntuMono Nerd Font:h13"
+vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 -- 禁用拼写检查
 vim.opt.spell = false
+-- 禁用鼠标
+vim.o.mouse = ""
 
 -- 设置窗口透明度
 vim.o.winblend = 50
@@ -16,4 +18,19 @@ if vim.g.neovide then
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_refresh_rate = 165
+  vim.g.neovide_refresh_rate_idle = 5
+  -- 分析器，该分析器在左上角显示帧时间图
+  vim.g.neovide_profiler = false
+end
+
+if vim.fn.has("win32") or (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
+  if vim.fn.executable("sioyek.exe") then
+    vim.g.vimtex_view_method = "sioyek"
+    vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
+    vim.g.vimtex_callback_progpath = "wsl nvim"
+  elseif vim.fn.executable("mupdf.exe") then
+    vim.g.vimtex_view_general_viewer = "mupdf.exe"
+  elseif vim.fn.executable("SumatraPDF.exe") then
+    vim.g.vimtex_view_general_viewer = "SumatraPDF.exe"
+  end
 end

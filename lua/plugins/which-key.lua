@@ -3,6 +3,10 @@ if true then
     {
       "folke/which-key.nvim",
       opts = {
+        defaults = {
+          ["<localLeader>l"] = { name = "+vimtex" },
+          ["<leader>d"] = { name = "+debug" },
+        },
         window = {
           border = "none", -- none, single, double, shadow
           position = "bottom", -- bottom, top

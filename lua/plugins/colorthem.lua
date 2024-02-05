@@ -3,7 +3,6 @@ if true then
     {
       "folke/tokyonight.nvim",
       lazy = true,
-      transparent = true,
       opts = {
         style = "night",
         transparent = false,
