@@ -21,10 +21,10 @@ if vim.g.neovide then
   end
 
   vim.keymap.set("n", "<C-=>", function()
-    change_scale_factor(0.05)
+    change_scale_factor(0.1)
   end)
   vim.keymap.set("n", "<C-->", function()
-    change_scale_factor(-0.05)
+    change_scale_factor(-0.1)
   end)
 
   vim.keymap.set("n", "<C-0>", function()
