@@ -3,6 +3,9 @@
 -- Add any additional options here
 vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
 
+if vim.fn.has("win32") or vim.fn.has("win64") then
+  vim.cmd("set shell=pwsh")
+end
 -- 设置窗口透明度
 vim.o.winblend = 50
 -- 设置弹出菜单透明度
