@@ -70,12 +70,3 @@ if vim.g.neovide then
   vim.api.nvim_set_keymap("n", "<F9>", ":lua ToggleTransparency()<CR>", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("n", "<F8>", ":lua ToggleTransparency_other()<CR>", { noremap = true, silent = true })
 end
-
--- 设置 <Tab> 键为超级 Tab 键 有提示时自动补全，否则执行原有功能
--- vim.keymap.set("i", "<Tab>", function()
---   if require("copilot.suggestion").is_visible() then
---     require("copilot.suggestion").accept()
---   else
---     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
---   end
--- end, { desc = "Super Tab" })
