@@ -73,7 +73,7 @@ if true then
             },
           },
           options = {
-            left = { size = 20 },
+            left = { size = 18 },
             bottom = { size = 8 },
             right = { size = 20 },
             top = { size = 8 },
