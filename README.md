@@ -1,7 +1,10 @@
 # 💤 MyNeovim
 
 My template for [LazyVim](https://github.com/LazyVim/LazyVim).
+
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+
+This is for my windows.
 
 ## ✨ Features
 
@@ -28,34 +31,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
   - [iterm2](https://iterm2.com/) **_(Macos)_**
 
 ## 🛠️ Installation
-
-### Linux & Macos
-
-- Make a backup of your current Neovim files:
-
-  ```sh
-  # required
-  mv ~/.config/nvim{,.bak}
-
-  # optional but recommended
-  mv ~/.local/share/nvim{,.bak}
-  mv ~/.local/state/nvim{,.bak}
-  mv ~/.cache/nvim{,.bak}
-  ```
-
-- Clone the starter
-
-  ```sh
-  git clone https://github.com/Flower101010/neovim-config.git ~/.config/nvim
-  ```
-
-- Start Neovim!
-
-  ```sh
-  nvim
-  ```
-
-  Refer to the comments in the files on how to customize **LazyVim**.
 
 ### windows (powershell)
 

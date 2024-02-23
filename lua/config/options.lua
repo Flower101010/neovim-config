@@ -23,15 +23,3 @@ if vim.g.neovide then
   -- 分析器，该分析器在左上角显示帧时间图
   vim.g.neovide_profiler = false
 end
-
-if vim.fn.has("win32") or (vim.fn.has("win64") and vim.fn.exists("$WSLENV")) then
-  if vim.fn.executable("sioyek.exe") then
-    vim.g.vimtex_view_method = "sioyek"
-    vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
-    vim.g.vimtex_callback_progpath = "wsl nvim"
-  elseif vim.fn.executable("mupdf.exe") then
-    vim.g.vimtex_view_general_viewer = "mupdf.exe"
-  elseif vim.fn.executable("SumatraPDF.exe") then
-    vim.g.vimtex_view_general_viewer = "SumatraPDF.exe"
-  end
-end
