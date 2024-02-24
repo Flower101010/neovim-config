@@ -3,6 +3,9 @@
 -- Add any additional options here
 vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
 
+if vim.fn.has("win32") and not (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
+  vim.cmd("set shell=pwsh")
+end
 -- 设置窗口透明度
 vim.o.winblend = 50
 -- 设置弹出菜单透明度
@@ -19,7 +22,7 @@ if vim.g.neovide then
   vim.g.neovide_profiler = false
 end
 
-if vim.fn.has("win32") or (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
+if vim.fn.has("win32") and (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
   if vim.fn.executable("sioyek.exe") then
     vim.g.vimtex_view_method = "sioyek"
     vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
