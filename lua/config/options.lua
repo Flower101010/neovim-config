@@ -3,10 +3,10 @@
 -- Add any additional options here
 vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
 
-if vim.fn.executable('pwsh')  then
+if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") == nil then
   vim.cmd("set shell=pwsh")
 end
-
+-- 这不是WSL环境
 
 -- 设置窗口透明度
 vim.o.winblend = 50
@@ -23,8 +23,7 @@ if vim.g.neovide then
   -- 分析器，该分析器在左上角显示帧时间图
   vim.g.neovide_profiler = false
 end
-
-if not vim.fn.executable('pwsh') then
+if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") ~= nil then
   if vim.fn.executable("sioyek.exe") then
     vim.g.vimtex_view_method = "sioyek"
     vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
