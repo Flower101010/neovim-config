@@ -7,8 +7,6 @@ vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans V
 vim.o.winblend = 50
 -- 设置弹出菜单透明度
 vim.o.pumblend = 80
--- 禁用拼写检查
-vim.opt.spell = false
 
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
