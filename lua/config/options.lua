@@ -3,6 +3,9 @@
 -- Add any additional options here
 vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
 
+if vim.fn.has("win32") and not (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
+  vim.cmd("set shell=pwsh")
+end
 if vim.fn.has("win32") or vim.fn.has("win64") then
   vim.cmd("set shell=pwsh")
 end
@@ -10,8 +13,6 @@ end
 vim.o.winblend = 50
 -- 设置弹出菜单透明度
 vim.o.pumblend = 80
--- 禁用拼写检查
-vim.opt.spell = false
 
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
@@ -22,4 +23,16 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate_idle = 5
   -- 分析器，该分析器在左上角显示帧时间图
   vim.g.neovide_profiler = false
+end
+
+if vim.fn.has("win32") and (vim.fn.has("unix") and vim.fn.exists("$WSLENV")) then
+  if vim.fn.executable("sioyek.exe") then
+    vim.g.vimtex_view_method = "sioyek"
+    vim.g.vimtex_view_sioyek_exe = "sioyek.exe"
+    vim.g.vimtex_callback_progpath = "wsl nvim"
+  elseif vim.fn.executable("mupdf.exe") then
+    vim.g.vimtex_view_general_viewer = "mupdf.exe"
+  elseif vim.fn.executable("SumatraPDF.exe") then
+    vim.g.vimtex_view_general_viewer = "SumatraPDF.exe"
+  end
 end
