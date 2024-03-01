@@ -2,10 +2,6 @@
 
 My template for [LazyVim](https://github.com/LazyVim/LazyVim).
 
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
-
-This is for my windows.
-
 ## ✨ Features
 
 - 🔥 Transform your Neovim into a full-fledged IDE
@@ -32,7 +28,44 @@ This is for my windows.
 
 ## 🛠️ Installation
 
-### windows (powershell)
+### Linux/MacOS
+
+- Make a backup of your current Neovim files:
+
+  ```sh
+  # required
+  mv ~/.config/nvim{,.bak}
+
+  # optional but recommended
+  mv ~/.local/share/nvim{,.bak}
+  mv ~/.local/state/nvim{,.bak}
+  mv ~/.cache/nvim{,.bak}
+  ```
+
+- Clone the starter
+
+  ```sh
+  git clone https://github.com/Flower101010/neovim-config ~/.config/nvim
+  ```
+
+- Remove the `.git` folder, so you can add it to your own repo later
+
+  ```sh
+  rm -rf ~/.config/nvim/.git
+  ```
+
+- Start Neovim!
+
+  ```sh
+  nvim
+  ```
+
+  Refer to the comments in the files on how to customize **LazyVim**.
+
+### Windows
+
+Install the template
+with [PowerShell](https://github.com/PowerShell/PowerShell)
 
 - Make a backup of your current Neovim files:
 
@@ -47,7 +80,7 @@ This is for my windows.
 - Clone the starter
 
   ```powershell
-  git clone https://github.com/Flower101010/neovim-config.git $env:LOCALAPPDATA\nvim
+  git clone https://github.com/Flower101010/neovim-config $env:LOCALAPPDATA\nvim
   ```
 
 - Remove the `.git` folder, so you can add it to your own repo later
@@ -64,8 +97,21 @@ This is for my windows.
 
   Refer to the comments in the files on how to customize **LazyVim**.
 
-tip:
-It is recommended to run `:checkhealth` after installation
+### docker
+
+```sh
+docker run -w /root -it --rm alpine:edge sh -uelic '
+  apk add git lazygit neovim ripgrep alpine-sdk --update
+  git clone https://github.com/Flower101010/neovim-config ~/.config/nvim
+  cd ~/.config/nvim
+  nvim
+'
+```
+
+> TIP
+>
+> It is recommended to run `:LazyHealth` after installation.
+> This will load all plugins and check if everything is working correctly.
 
 ## 📂 File Structure
 

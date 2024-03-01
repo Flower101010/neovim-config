@@ -6,7 +6,6 @@ vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans V
 if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") == nil then
   vim.cmd("set shell=pwsh")
 end
--- 这不是WSL环境
 
 -- 设置窗口透明度
 vim.o.winblend = 50
