@@ -2,6 +2,7 @@ if true then
   return {
     {
       "folke/which-key.nvim",
+      lazy = true,
       opts = {
         defaults = {
           ["<localLeader>l"] = { name = "+vimtex" },

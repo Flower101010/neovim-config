@@ -2,6 +2,7 @@ if true then
   return {
     {
       "telescope.nvim",
+      lazy = true,
       opts = {
 
         defaults = {
