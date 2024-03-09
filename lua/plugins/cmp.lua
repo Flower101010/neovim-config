@@ -2,12 +2,14 @@ if true then
   return {
     {
       "L3MON4D3/LuaSnip",
+      lazy = true,
       keys = function()
         return {}
       end,
     },
     {
       "hrsh7th/nvim-cmp",
+      lazy = true,
       dependencies = {
         "hrsh7th/cmp-emoji",
       },
