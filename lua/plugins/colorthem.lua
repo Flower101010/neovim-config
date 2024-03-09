@@ -21,7 +21,7 @@ if true then
           functions = {},
           variables = {},
           -- Background styles. Can be "dark", "transparent" or "normal"
-          sidebars = "transparent", -- style for sidebars, see below
+          sidebars = "dark", -- style for sidebars, see below
           floats = "transparent", -- style for floating windows
         },
         dim_inactive = true,
