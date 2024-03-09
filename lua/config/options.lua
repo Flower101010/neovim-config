@@ -7,11 +7,6 @@ if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") == nil then
   vim.cmd("set shell=pwsh")
 end
 
--- 设置窗口透明度
-vim.o.winblend = 50
--- 设置弹出菜单透明度
-vim.o.pumblend = 80
-
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
@@ -21,6 +16,10 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate_idle = 5
   -- 分析器，该分析器在左上角显示帧时间图
   vim.g.neovide_profiler = false
+  -- 设置窗口透明度
+  vim.o.winblend = 70
+  -- 设置弹出菜单透明度
+  vim.o.pumblend = 70
 end
 if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") ~= nil then
   if vim.fn.executable("sioyek.exe") then
