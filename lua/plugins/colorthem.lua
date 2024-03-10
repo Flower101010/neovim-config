@@ -37,14 +37,14 @@ if true then
             fg = c.bg_dark,
           }
           hl.TelescopePromptNormal = {
-            bg = prompt,
+            bg = c.bg_dark,
           }
           hl.TelescopePromptBorder = {
-            bg = prompt,
+            bg = c.bg_dark,
             fg = prompt,
           }
           hl.TelescopePromptTitle = {
-            bg = prompt,
+            bg = c.bg_dark,
             fg = prompt,
           }
           hl.TelescopePreviewTitle = {
