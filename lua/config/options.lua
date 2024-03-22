@@ -4,7 +4,7 @@
 vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
 
 if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") == nil then
-  vim.cmd("set shell=pwsh")
+  LazyVim.terminal.setup("pwsh")
 end
 
 if vim.g.neovide then
