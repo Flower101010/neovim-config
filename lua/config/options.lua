@@ -12,7 +12,7 @@ if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_remember_window_size = true
-  vim.g.neovide_refresh_rate = 165
+  vim.g.neovide_refresh_rate = 240
   vim.g.neovide_refresh_rate_idle = 5
   -- 分析器，该分析器在左上角显示帧时间图
   vim.g.neovide_profiler = false
