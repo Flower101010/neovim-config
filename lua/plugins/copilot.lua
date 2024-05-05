@@ -14,8 +14,9 @@ if true then
           cvs = false,
           tex = false,
           ["."] = false,
+          typst = false,
         },
       },
-    }
+    },
   }
 end
