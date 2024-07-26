@@ -17,7 +17,6 @@ if true then
       lazy = true,
       opts = {
         win = {
-          winblend = winblendValue,
         },
       },
     },
