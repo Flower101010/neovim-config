@@ -16,7 +16,7 @@ if true then
       "folke/which-key.nvim",
       lazy = true,
       opts = {
-        window = {
+        win = {
           winblend = winblendValue,
         },
       },
