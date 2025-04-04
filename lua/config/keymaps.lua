@@ -12,7 +12,7 @@ if vim.g.neovide then
   map(
     "n",
     "<F11>",
-    [[:lua vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen<CR>]],
+    [[:lua vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen vim.g.neovide_scale_factor=0.9<CR>]],
     { noremap = true, silent = true, desc = "Toggle Fullscreen" }
   )
   -- "<C-=>" 放大字体 "<C-->" 缩小字体 "<C-0>" 恢复默认
