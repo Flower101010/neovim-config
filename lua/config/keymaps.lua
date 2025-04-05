@@ -18,7 +18,7 @@ if vim.g.neovide then
   -- "<C-=>" 放大字体 "<C-->" 缩小字体 "<C-0>" 恢复默认
   local change_scale_factor = function(delta)
     if delta == 1 then
-      vim.g.neovide_scale_factor = 1
+      vim.g.neovide_scale_factor = 0.9
     else
       vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + delta
     end

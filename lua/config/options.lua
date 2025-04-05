@@ -10,6 +10,7 @@ end
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.o.guifont = "JetBrainsMono Nerd Font,Source Han Sans SC VF,Source Han Sans VF:h13"
+  vim.g.neovide_scale_factor = 0.9
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_remember_window_size = true
   vim.g.neovide_refresh_rate = 240
