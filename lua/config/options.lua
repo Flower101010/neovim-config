@@ -21,6 +21,9 @@ if vim.g.neovide then
   vim.o.winblend = 70
   -- 设置弹出菜单透明度
   vim.o.pumblend = 70
+  -- Title bar color
+  vim.g.neovide_title_background_color = "#222436"
+  vim.g.neovide_title_text_color = "pink"
 end
 if vim.fn.has("win32") and os.getenv("WSL_DISTRO_NAME") ~= nil then
   if vim.fn.executable("sioyek.exe") then

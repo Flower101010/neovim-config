@@ -38,10 +38,10 @@ if vim.g.neovide then
   end, { desc = "Reset Zoom" })
 
   -- 透明度 快捷键 设置
-  vim.g.neovide_transparency = 1.0
+  vim.g.neovide_opacity = 1.0
 
   local change_transparency = function(delta)
-    vim.g.neovide_transparency = vim.g.neovide_transparency + delta
+    vim.g.neovide_opacity = vim.g.neovide_opacity + delta
   end
 
   map({ "n", "v", "o" }, "<A-=>", function()
