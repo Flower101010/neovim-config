@@ -1,7 +1,7 @@
 return {
   -- requires tinymist
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "tinymist",
@@ -13,7 +13,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       "mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     ---@class PluginLspOpts
     opts = {

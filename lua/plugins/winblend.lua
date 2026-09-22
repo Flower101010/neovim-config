@@ -3,7 +3,7 @@ if true then
   -- value between 0-100 0 for fully opaque and 100 for fully transparent
   return {
     {
-      "telescope.nvim",
+      "nvim-telescope/telescope.nvim",
       lazy = true,
       opts = {
 
